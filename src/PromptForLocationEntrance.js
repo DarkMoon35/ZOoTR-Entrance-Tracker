@@ -24,11 +24,15 @@ export default function PromptForLocationEntrance({ locationToPromptFor, showIni
                 </h5>
             </div>
             <div className="prompt-field field column is-grouped has-addons has-addons-centered is-vcentered">
-                <div className="select is-small control">
-                    <select
+                <div className="is-small control">
+                    <input
                         onChange={e => setSelectedLocation(e.target.value)}
                         value={selectedLocation}
+                        list="availableEntrances"
                     >
+                    </input>
+
+                    <datalist id="availableEntrances">
                         <option value="">Select a location</option>
                         {Object.keys(availableEntrances).sort().map((area, i) => {
                             if (availableEntrances[area].length === 0) {
@@ -49,7 +53,7 @@ export default function PromptForLocationEntrance({ locationToPromptFor, showIni
                             </optgroup>
                         })
                         }
-                    </select>
+                    </datalist>
                 </div>
                 <button className="button is-small control" onClick={setInteriorToAreaAndEntrance}>
                     Add {locationToPromptFor}

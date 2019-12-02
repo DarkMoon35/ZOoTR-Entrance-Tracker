@@ -660,28 +660,6 @@ export default function ZOoTREntranceTracker() {
 
             {Object.keys(interiorEntrances).length >= 1 &&
                 <div className="app-config flex-wraps">
-                    <div className="entrances-control config-control">
-                        <div className="field is-grouped">
-                            <p className="control">
-                                <a
-                                    href="#overworld"
-                                    className={"button is-outlined is-small " + (!overworldOnly ? "is-link" : "is-dark")}
-                                    onClick={() => setOverworldOnly(false)}
-                                >
-                                    All Entrances
-                                </a>
-                            </p>
-                            <p className="control">
-                                <a
-                                    href="#overworld"
-                                    className={"button is-outlined is-small " + (overworldOnly ? "is-link" : "is-dark")}
-                                    onClick={() => setOverworldOnly(true)}
-                                >
-                                    Overworld and Dungeon Entrances
-                                </a>
-                            </p>
-                        </div>
-                    </div>
                     <div className="router-control config-control">
                         <div className="field is-grouped">
                             <p className="control">

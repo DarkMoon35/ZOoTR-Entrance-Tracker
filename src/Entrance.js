@@ -74,8 +74,8 @@ export default function Entrance({ options, entrance, areaName, entranceName, ..
                     </div>
                     :
                     // no interior or area is set, so display available options to select
-                    <div className="select is-small entrance-select">
-                        <select value="Not Checked" onChange={event =>
+                    <div className="is-small entrance-select">
+                        <input list="uncheckedEntrances" value="" onChange={event =>
                             props.setEntrance(
                                 // the area and entrance and type that is being assigned
                                 // used to determine steps to take in this.setEntrance
@@ -89,6 +89,8 @@ export default function Entrance({ options, entrance, areaName, entranceName, ..
                                 JSON.parse(event.target.value)
                             )
                         }>
+                        </input>
+                        <datalist id="uncheckedEntrances">
                             <option value="Not Checked">Not Checked</option>
                             {options instanceof Array ?
                                 // if its an array, it's areas, houses, or grottos
@@ -134,7 +136,7 @@ export default function Entrance({ options, entrance, areaName, entranceName, ..
                                     </optgroup>
                                 })
                             }
-                        </select>
+                        </datalist>
                     </div>
             }
         </div>
