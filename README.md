@@ -21,7 +21,7 @@ Now, there is a second option in Roman's fork that changes the way brakkum's wor
 Let's take another example. You are in Link's House (again). You go out to Kokiri Forest, but it makes you enter the Hyrule Fields.
 This one is easier to understand: every Entrance can lead to any other Entrance. You could enter the Forest and be warped in Zora's Domain.
 
-I wish to do a full tracker based on brakkum's awesome work that takes those two elements. But they won't be optional, it will be the way it will work.
+I wish to do a full tracker based on brakkum's awesome work that takes those two elements. But they won't be optional, it will be the only way it will work.
 So: when you will click on a combobox to select the destination of the Entrance, there will be many options... I will change that too, comboboxes will be changed into text fields with completion suggestions.
 
 ## Why isn't it a branch that will be merged into brakkum's work once it's done?
